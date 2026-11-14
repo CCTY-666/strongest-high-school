@@ -1,0 +1,45 @@
+{
+  "name": "strongest-high-school",
+  "productName": "StrongestHighSchool",
+  "version": "0.1.0",
+  "description": "谁是最强高中 - 6 枚校徽 · 5 种流派 · 竖屏 9:16 自动对战 demo",
+  "main": "main.js",
+  "author": "Your Name",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win --x64"
+  },
+  "build": {
+    "appId": "com.example.strongesthighschool",
+    "productName": "StrongestHighSchool",
+    "artifactName": "StrongestHighSchool-${version}.${ext}",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "../index.html",
+        "to": "game/index.html"
+      }
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "dir",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "electron": "^31.3.0",
+    "electron-builder": "^24.13.3"
+  }
+}

@@ -1,0 +1,10 @@
+node_modules/
+steam/node_modules/
+steam/dist/
+steam/output/
+steam/content/
+*.log
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
